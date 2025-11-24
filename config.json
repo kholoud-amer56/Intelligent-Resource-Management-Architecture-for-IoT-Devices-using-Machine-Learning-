@@ -1,0 +1,31 @@
+{
+  "data": {
+    "filename": "D:\\\\Network\\\\iot23_combined_new.csv",
+    "columns": [
+      "duration",
+      "orig_bytes",
+      "resp_bytes",
+      "missed_bytes",
+      "orig_pkts",
+      "orig_ip_bytes",
+      "resp_pkts",
+      "resp_ip_bytes"
+    ],
+    "sequence_length": 10,
+    "train_test_split": 0.7,
+    "normalise": true
+  },
+  "model": {
+    "save_dir": "models",
+    "encoder_layers": [64, 32],
+    "decoder_layers": [32, 64],
+    "latent_dim": 16,
+    "dropout": 0.2,
+    "loss": "huber",
+    "optimizer": "adam"
+  },
+  "training": {
+    "epochs": 15,
+    "batch_size": 128
+  }
+}
